@@ -1,0 +1,327 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(19, 19, 19);
+    padding: 20;
+    position: relative;
+    display: flexbox;
+}
+body::-webkit-scrollbar{
+    overflow: hidden;
+}
+
+/*-----------------------------section projectlist-----------------------------------------------------------------*/
+.projectlist{
+    height: 100%;
+    width: 30%;
+    position: relative;
+    top: 10%;
+    right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-projectlist{
+    height: 80%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project1, .project2, .project3 ,.project4, .project5{
+    height: 8%;
+    width: 150%;
+    margin: 10px 0px 10px 0px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9em;
+}  
+
+.project1 > p:nth-child(2){
+  color: rgb(151, 151, 151);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6em;
+  display: none;
+}
+.date2, .date3, .date4, .date5{
+  color: rgb(151, 151, 151);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6em;
+  display: none;
+}
+.project1:hover .date, .project2:hover .date2, .project3:hover .date3, .project4:hover .date4, .project5:hover .date5{
+  display: block;
+  position: relative;
+  left: 40%;
+}
+.project1:hover, .project2:hover, .project3:hover, .project4:hover, .project5:hover{
+  height: 9%;
+  width: 155%;
+  border-radius: 25px;
+  background-color: rgb(224, 224, 224);
+  box-shadow: 0px 4px 20px -5px rgb(141, 141, 141);
+}
+.project1:hover .p1p, .project2:hover .p2p, .project3:hover .p3p, .project4:hover .p4p, .project5:hover .p5p{
+  transform: translateX(20px);
+  color: black;
+}
+
+
+/*-----------------------------section Name/Info-----------------------------------------------------------------*/
+.name{
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    left: 30%;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name-container{
+    width: 70%;
+    height: 20%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name-container > p{
+    position: absolute;
+    top: 4%;
+    left: 14%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -0.1em;
+}
+.jj{
+  color: white;
+    font-size: 1em;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -0.1em;
+    text-shadow: 0px 0px 10px #50cbff7b, 0px 0px 20px #0091ffd7;
+    cursor: pointer;
+}
+.info-container{
+  position: absolute;
+  top: 43%;
+  left: 25%;
+  color: rgb(202, 202, 202);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+.container-accounts{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 47%;
+    right: 39%;
+}
+.container-accounts > a{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    margin: 0% 10% 0% 10%;
+    color: rgb(138, 138, 138);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.jj:hover{
+    text-shadow: 0px 0px 10px #00b3ff7b, 0px 0px 20px #0091ff, 0px 0px 50px #0091ffe2 ;
+}
+.name-container-p > h1:hover{
+    color: white;
+}
+.container-accounts > a:hover{
+    text-shadow: 
+    0 0 10px #e8f5ffd7; 
+    color: white;
+}
+/*-----------code for welcome animation--------*/
+/* Define the initial state and transition for the welcome section */
+.welcome {
+    height: 10%;
+    width: 45%;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-20px); /* Start off-screen */
+}
+
+.welcome.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0); /* Move into place */
+}
+
+.welcome.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px); /* Move off-screen */
+}
+
+/* For the text animation */
+.for-welcome-text {
+    display: inline-block;
+    color: rgb(225, 225, 225);
+    font-size: 3.5em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: start;
+}
+
+.for-welcome-text span{
+    opacity: 0;
+    display: inline-block;
+    animation: show-letter 0.7s forwards;
+}
+
+@keyframes show-letter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.for-welcome-text  span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .for-welcome-text  span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .for-welcome-text  span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .for-welcome-text  span:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  .for-welcome-text  span:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+  .for-welcome-text span:nth-child(6) {
+    animation-delay: 0.10s;
+  }
+  .for-welcome-text span:nth-child(7) {
+    animation-delay: 0.12s;
+  }
+  .for-welcome-text span:nth-child(8) {
+    animation-delay: 0.14s;
+  }
+  .for-welcome-text  span:nth-child(9) {
+    animation-delay: 0.16s;
+  }
+  .for-welcome-text  span:nth-child(10) {
+    animation-delay: 0.18s;
+  }
+  .for-welcome-text  span:nth-child(11) {
+    animation-delay: 0.20s;
+  }
+  .for-welcome-text  span:nth-child(12) {
+    animation-delay: 0.22s;
+  }
+  .for-welcome-text  span:nth-child(13) {
+    animation-delay: 0.24s;
+  }.for-welcome-text  span:nth-child(14) {
+    animation-delay: 0.26s;
+  }.for-welcome-text  span:nth-child(15) {
+    animation-delay: 0.28s;
+  }.for-welcome-text  span:nth-child(16) {
+    animation-delay: 0.30s;
+  }.for-welcome-text  span:nth-child(17) {
+    animation-delay: 0.32s;
+  }.for-welcome-text  span:nth-child(18) {
+    animation-delay: 0.34s;
+  }.for-welcome-text  span:nth-child(19) {
+    animation-delay: 0.36s;
+  }.for-welcome-text  span:nth-child(20) {
+    animation-delay: 0.38s;
+  }.for-welcome-text  span:nth-child(21) {
+    animation-delay: 0.40s;
+  }.for-welcome-text  span:nth-child(22) {
+    animation-delay: 0.42s;
+  }.for-welcome-text  span:nth-child(23) {
+    animation-delay: 0.44s;
+  }.for-welcome-text  span:nth-child(24) {
+    animation-delay: 0.46s;
+  }.for-welcome-text  span:nth-child(25) {
+    animation-delay: 0.48s;
+  }.for-welcome-text  span:nth-child(26) {
+    animation-delay: 0.50s;
+  }.for-welcome-text  span:nth-child(27) {
+    animation-delay: 0.52s;
+  }
+
+  /*animated border here*/
+.line{
+  width: 95%;
+  border: solid 1px white;
+  position: absolute;
+  top: 74%;
+  left:3%;
+}
+.glow{
+  position: absolute;
+  top: 51%;
+  left: 70%;
+  z-index: -1;
+}
+  .glowing-border {
+    width: 10px;
+    height: 150px;
+    position: relative;
+    border: solid 1px white;
+    border-width: 1px 1px 0px 1px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    border-radius: 25px 25px 0px 0px;
+  }
+  
+  .glowing-border::before {
+    content: '';
+    position: absolute;
+    top: 1%;
+    width: 130px;
+    height: 10px;
+    background: conic-gradient(from 0deg, #0c59ff, #0c59ff, #0051ff, #0c59ff  );
+    box-shadow: 0px 0px 5px 2px rgb(19, 23, 255), 0px 0px 25px -3px rgb(8, 8, 252), 0px 0px 45px 1px rgb(0, 0, 255);
+    animation: rotate 5s linear infinite;
+    z-index: 1; 
+    border-radius: 55px;
+  }
+  
+
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
