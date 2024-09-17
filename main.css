@@ -58,6 +58,10 @@ body::-webkit-scrollbar{
   font-size: 0.6em;
   display: none;
 }
+.week-tracker-a, .pos-a, .taptop, .riddle-webgame{
+  text-decoration: none;
+  color: white;
+}
 .project1:hover .date, .project2:hover .date2, .project3:hover .date3, .project4:hover .date4, .project5:hover .date5{
   display: block;
   position: relative;
@@ -90,7 +94,7 @@ body::-webkit-scrollbar{
 .name-container{
     width: 70%;
     height: 20%;
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
