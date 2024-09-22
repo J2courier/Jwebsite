@@ -18,7 +18,15 @@ section{
   position: relative;
   margin: 5%;
 }
-
+.main-container{
+  width: 100%;
+  height: 100%;
+  border: solid 1px white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 /*-----------------------------section projectlist-----------------------------------------------------------------*/
 .projectlist{
     height: 100%;
@@ -59,7 +67,7 @@ section{
   font-size: 0.6em;
   display: none;
 }
-.date2, .date3, .date4, .date5{
+.date, .date2, .date3, .date4, .date5{
   color: rgb(151, 151, 151);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.6em;
@@ -115,7 +123,7 @@ section{
     top: 1%;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: -0.1em;
-    text-shadow: 0px 0px 10px #50cbff7b, 0px 0px 20px #0091ffd7;
+    filter: drop-shadow(0px 0px 20px #0000ff);
     cursor: pointer;
 }
 .name-container > h1{
@@ -135,7 +143,7 @@ section{
     position: absolute;
     display: flex;
     justify-content: flex-start;
-    top: 50%;
+    top: 50%;   
     right: 3%;
 }
 .container-accounts > a{
@@ -154,7 +162,7 @@ section{
 }
 
 .jj:hover{
-    text-shadow: 0px 0px 10px #00b3ff7b, 0px 0px 20px #0091ff, 0px 0px 50px #0091ffe2 ;
+    text-shadow: 0px 0px 10px #0000ff7b, 0px 0px 10px #0000ff7b, 0px 0px 10px #0000ff7b;
 }
 .name-container-p > h1:hover{
     color: white;
@@ -165,24 +173,43 @@ section{
     color: white;
 }
 /*-----------code for welcome animation--------*/
-/* Define the initial state and transition for the welcome section */
+.container-imgpfp{
+  height: 18%;
+  width: 15%; 
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  top: 40%;
+  left: 30%;
+  visibility: hidden;
+}
+.container-imgpfp > img{
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  border-radius: 15px;
+  visibility: hidden;
+  transform: opacity 0.5s ease, transform 0.5s ease;
+}
+
 .welcome {
     height: 10%;
     width: 45%;
     position: absolute;
     top: 10%;
-    left: 30%;
+    left: 25%;
     display: flex;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
-    transform: translateY(-20px); /* Start off-screen */
+    transform: translateY(-20px); 
 }
 
 .welcome.visible {
     visibility: visible;
     opacity: 1;
-    transform: translateY(0); /* Move into place */
+    transform: translateY(0); 
 }
 
 .welcome.hidden {
@@ -190,8 +217,6 @@ section{
     opacity: 0;
     transform: translateY(-20px); /* Move off-screen */
 }
-
-/* For the text animation */
 .for-welcome-text {
     display: inline-block;
     color: rgb(225, 225, 225);
@@ -262,133 +287,37 @@ section{
       transform: rotate(360deg);
     }
   }
-  /*---------------------------------code for boxes-------------------------*/
-  .box1{
-    height: 17%;
-    border: solid 1.5px rgb(26, 26, 255);
-    border-width: 0px 1.5px 1.5px 0px;
-    border-radius: 5% 0% 5% 0%;
-    box-shadow: 0px 0px 5px 0px blue, 0px 0px 7px 0px blue;
-    position: absolute;
-    top: 45%;
-    left: 78.5%;
-    z-index: -1;
-  }
-  .box6{
-    width: 28%;
-    height: 0%;
-    border: solid 1.5px rgb(26, 26, 255);
-    border-width: 0px 1.5px 1.5px 0px;
-    border-radius: 5% 0% 5% 0%;
-    box-shadow: 0px 0px 5px 0px blue, 0px 0px 7px 0px blue;
-    position: absolute;
-    top: 62%;
-    left: 78.5%;
-    z-index: -1;
-  }
-  .box7{
-    height: 18%;
-    border: solid 1.5px rgb(26, 26, 255);
-    border-width: 0px 1.5px 1.5px 0px;
-    border-radius: 5% 0% 5% 0%;
-    box-shadow: 0px 0px 5px 0px blue, 0px 0px 7px 0px blue;
-    position: absolute;
-    top: 62%;
-    left: 106.5%;
-    z-index: -1;
-  }
-  .box8{
-    width: 28%;
-    height: 0%;
-    border: solid 1.5px rgb(26, 26, 255);
-    border-width: 0px 1.5px 1.5px 0px;
-    border-radius: 5% 0% 5% 0%;
-    box-shadow: 0px 0px 5px 0px blue, 0px 0px 7px 0px blue;
-    position: absolute;
-    top: 80%;
-    left: 78.5%;
-    z-index: -1;
-  }
-  .box9{
-    height: 3%;
-    border: solid 1.5px rgb(26, 26, 255);
-    border-width: 0px 1.5px 1.5px 0px;
-    border-radius: 5% 0% 5% 0%;
-    box-shadow: 0px 0px 5px 0px blue, 0px 0px 7px 0px blue;
-    position: absolute;
-    top: 80%;
-    left: 78.5%;
-    z-index: -1;
-  }
-  .box5{
-    height: 20%;
-    border: solid 1.5px rgb(26, 26, 255);
-    border-width: 0px 1.5px 1.5px 0px;
-    border-radius: 5% 0% 5% 0%;
-    box-shadow: 0px 0px 5px 0px blue, 0px 0px 7px 0px blue;
-    position: absolute;
-    top: 109%;
-    left: 78.5%;
-    z-index: -1;
-  }
-  .box2{
-    width: 40%;
-    height: 20%;
-    border: solid 1.5px #a9a9ff;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px 0px blue;
-    position: absolute;
-    top: 88.6%;
-    left: 59%;
-    z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-.box3{
-  height: 50%;
-  width: 10%;
-  background-color: #0044d8;
-  box-shadow: 0px 0px 10px -2px blue;
-  border-radius: 0px 5px 5px 0px;
-  position: absolute;
-  left: 0%;
-  top: 25%;
-}
-.box4{
-  height: 2%;
-  width: 3%;
-  background-color: #001b88;
-  border: solid 1px rgb(0, 191, 255);
-  box-shadow: 0px 0px 20px -5px blue, 0px 0px 30px -1px #0000ff ;
-  border-radius: 2px 2px 0px 0px;
-  position: absolute;
-  left: 77.2%;
-  top: 83%;
-  
-}
-.containerforbox1and4{
-    position: absolute;
-    height: 110%;
-    width: 70%;
-    left: 23.6%;
-}
-.blueburp{
-  position: absolute;
-  height: 40%;
-  left: 80%;
 
-  animation: moveLeftRight 3s ease-in-out infinite;
-  filter: drop-shadow(0px 0px 20px #0000ff); /* Apply drop shadow */
+  /*media queries here*/
+
+
+@media (min-width: 475px){
+    .main-container {
+        max-width: 475px;
+    }
 }
-@keyframes moveLeftRight {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(calc(50% - 435px)); /* Move to the right edge */
-  }
-  100% {
-    transform: translateX(0); /* Move back to the starting position */
-  }
+@media (min-width: 640px){
+  .main-container {
+        max-width: 640px;
+    }
+}
+@media (min-width: 786px){
+  .main-container{
+        max-width: 786px;
+    }
+}
+@media (min-width: 1024px){
+  .main-container {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px){
+  .main-container {
+        max-width: 1280px;
+    }
+}
+@media (min-width: 1536px){
+  .main-container{
+        max-width: 1536x;
+    }
 }
