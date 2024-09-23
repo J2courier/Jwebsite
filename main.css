@@ -38,6 +38,7 @@ a:hover{
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  border: solid 1px greenyellow;
 }
 
 .container-for-cat{
@@ -343,5 +344,6 @@ a:hover{
 @media (min-width: 1536px){
   .main-container{
         max-width: 1536x;
+        
     }
 }
