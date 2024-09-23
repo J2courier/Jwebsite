@@ -3,12 +3,14 @@
     padding: 0px;
 }
 body{
+    color: white;
     background-color: rgb(19, 19, 19);
     padding: 20;
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-family: 'Roboto Mono', sans-serif;
 
 }
 body::-webkit-scrollbar{
@@ -17,242 +19,113 @@ body::-webkit-scrollbar{
 section{
   position: relative;
   margin: 5%;
+  font-size: 12px;
+}
+a{
+  text-decoration: none;
+  font-size: 0.8em;
+  color: rgb(107, 107, 107);
+  z-index: 5;
+}
+a:hover{
+  filter: drop-shadow(0px 0px 5px rgb(3, 95, 255));
+  color: white;
 }
 .main-container{
   width: 100%;
   height: 100%;
-  border: solid 1px white;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-/*-----------------------------section projectlist-----------------------------------------------------------------*/
-.projectlist{
-    height: 100%;
-    width: 30%;
-    position: relative;
-    top: 5%;
-    left: -10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container-projectlist{
-    height: 80%;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.project1, .project2, .project3 ,.project4, .project5{
-    height: 8%;
-    width: 150%;
-    margin: 10px 0px 10px 0px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 0.9em;
-}  
-
-.project1 > p:nth-child(2){
-  color: rgb(151, 151, 151);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.6em;
-  display: none;
-}
-.date, .date2, .date3, .date4, .date5{
-  color: rgb(151, 151, 151);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.6em;
-  display: none;
-}
-.week-tracker-a, .pos-a, .taptop, .riddle-webgame{
-  text-decoration: none;
-  color: white;
-}
-.project1:hover .date, .project2:hover .date2, .project3:hover .date3, .project4:hover .date4, .project5:hover .date5{
-  display: block;
+.container-for-cat{
+  height: 40%;
+  width: 40%;
+  /*border: solid 1px white;  */
   position: relative;
-  left: 40%;
-}
-.project1:hover, .project2:hover, .project3:hover, .project4:hover, .project5:hover{
-  height: 9%;
-  width: 155%;
-  border-radius: 25px;
-  background-color: rgb(224, 224, 224);
-  box-shadow: 0px 4px 20px -5px rgb(141, 141, 141);
-}
-.project1:hover .p1p, .project2:hover .p2p, .project3:hover .p3p, .project4:hover .p4p, .project5:hover .p5p{
-  transform: translateX(20px);
-  color: black;
 }
 
-
-/*-----------------------------section Name/Info-----------------------------------------------------------------*/
-.name{
-    height: 100%;
-    width: 30%;
-    position: relative;
-    left: -12%;
-    bottom: 10%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.name-container{
-    width: 100%;
-    height: 20%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.jj{
-    height: 20%;      
-    width: 100%;
-    color: white;
-    font-size: 1em;
-    position: absolute;
-    top: 1%;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: -0.1em;
-    filter: drop-shadow(0px 0px 20px #0000ff);
-    cursor: pointer;
-}
-.name-container > h1{
-  height: 100%;
-  width: 100%;
+.name-section-container{
   position: absolute;
-  top: 20%;
-  left: 0%;
-  color: rgb(158, 158, 158);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.6em;
+  top: 25%;
+  left: 23%;
+  /*border: white 1px solid;*/
+  width: 40%;
+  height: 20%;
+  display: flex;
+  font-size: 1vw;
+  align-items: flex-start;
 }
 
-.container-accounts{
-    height: 15%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: flex-start;
-    top: 50%;   
-    right: 3%;
+.name-container{
+  position: relative;
+  width: 100%;
+  height: 55%;
+  /*border: solid 1px rgb(76, 60, 255);*/
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7em;
 }
-.container-accounts > a{
-    position: relative;
-    height: 10%;
-    width: 20%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.6em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    color: rgb(138, 138, 138);
-    text-decoration: none;
-    cursor: pointer;
+
+.jj{  
+  color: rgb(203, 203, 203);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 9;
 }
 
 .jj:hover{
-    text-shadow: 0px 0px 10px #0000ff7b, 0px 0px 10px #0000ff7b, 0px 0px 10px #0000ff7b;
+  filter: drop-shadow(0px 0px 5px rgb(8, 103, 255));
 }
-.name-container-p > h1:hover{
-    color: white;
-}
-.container-accounts > a:hover{
-    text-shadow: 
-    0 0 10px #e8f5ffd7; 
-    color: white;
-}
-/*-----------code for welcome animation--------*/
-.container-imgpfp{
-  height: 18%;
-  width: 15%; 
+
+.account-container{
   position: absolute;
+  width: 80%;
+  height: 15%;
+  /*zborder: solid 1px red;*/
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  top: 40%;
-  left: 30%;
-  visibility: hidden;
+  top: 60%;
+  z-index: 30;
 }
-.container-imgpfp > img{
+
+.container-of-windmill{
+  position: relative;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  border-radius: 15px;
-  visibility: hidden;
-  transform: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.welcome {
-    height: 10%;
-    width: 45%;
-    position: absolute;
-    top: 10%;
-    left: 25%;
-    display: flex;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    transform: translateY(-20px); 
-}
-
-.welcome.visible {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0); 
-}
-
-.welcome.hidden {
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-20px); /* Move off-screen */
-}
-.for-welcome-text {
-    display: inline-block;
-    color: rgb(225, 225, 225);
-    font-size: 3.5em;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: start;
-}
-
-
-.line{
-  width: 80%;
-  border: solid 1px white;
+.windmill-section{  
   position: absolute;
-  top: 80%;
+  height: 40%;
+  width: 90%;
+  top:30%;
   left: 0%;
 }
-.line2{
-  width: 20%;
+
+.line1{
   border: solid 1px white;
   position: absolute;
-  top: 80%;
-  left: 81%;
+  width: 80%;
+  top: 100%;
 }
-.glow{
+
+.line2{
+  border: solid 1px white;
   position: absolute;
-  height: 35%;
-  width: 95%;
-  top: 25%;
-  left: -35; 
-  z-index: -1;
+  left: 81%;
+  width: 20%;
+  top: 100%;
 }
+
 .glowing-border {
     width: 0.8%;
     height: 50%;
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 80%;
     border: solid 1px white;
     border-width: 1px 1px 0px 1px ;
@@ -276,8 +149,6 @@ section{
     z-index: 1; 
     border-radius: 55px;
   }
-
-
   
   @keyframes rotate {
     0% {
@@ -287,6 +158,159 @@ section{
       transform: rotate(360deg);
     }
   }
+
+
+/*---------------------------project list---------------------------------*/
+.project-section{
+  /*border: white 1px solid;*/
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  height: 50%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  font-size: 1vw;
+}
+
+.project-container{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  /*border: solid 1px white;*/
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.project-container a{
+  color: white;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-container a:hover{
+    color: black;
+    filter: none;
+}
+
+.project1, .project2, .project3, .project4, .project5{
+  width: 100%;
+  height: 15%;
+  /*border: solid 1px white;*/
+  border-radius: 15px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 20;
+  font-size: 0.8em;
+}
+
+.project1:hover, 
+.project2:hover, 
+.project3:hover, 
+.project4:hover, 
+.project5:hover{
+  height: 16%;
+  width: 105%;
+  color: #000000;
+  border-radius: 25px;
+  background-color: rgb(234, 234, 234);
+  box-shadow: 0px 0px 5px 1px #515151;
+} 
+
+/*---------------------------------------welcome section---------------------*/
+.welcome-section{
+  height: 60%;
+  width: 45%;
+  /*border: solid 1px white;*/
+  position: relative;
+  font-size: 1vw;
+  top: 8%;
+  left: 22%;
+  z-index: 25;
+  display: flex;
+  align-items: center;
+}
+
+.container-for-welcome{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  font-size: 3.1em;
+  letter-spacing: -0.1em;
+}
+
+.name-section-container,
+.welcome-section {
+    transition: opacity 0.5s ease; /* Adjust duration and timing as needed */
+    opacity: 1; /* Default visible state */
+}
+
+.hidden {
+    opacity: 0; /* Hidden state */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.welcome-section p {
+  position: absolute;
+  top: 80%;
+  left: 33%;
+  font-size: 0.5em;
+  color: #727272;
+  filter: drop-shadow(0px 0px 5px rgb(80, 80, 80));
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.welcome-section.show p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.welcome-section h1 {
+  filter: drop-shadow(0px 0px 5px rgb(80, 80, 80));
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.welcome-section.show h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cat{
+  height: 30%;
+  width: 20%;
+  visibility: hidden;
+  z-index: 26;
+  border-radius: 5px;
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  box-shadow: 0px 0px 5px 0px white;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cat.show {
+  visibility: visible; /* Show the element */
+  transform: translateY(0);
+}
+
+.cat.hidden {
+  visibility: hidden; /* Hide the element */
+}
+
 
   /*media queries here*/
 

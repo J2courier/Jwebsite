@@ -1,26 +1,27 @@
-const clickProject1 = document.querySelector(".project1");
-const sectionName = document.querySelector(".name");
-const imagePfp = document. querySelector(".container-imgpfp > img");
-const welcome = document.querySelector(".welcome");
+const project1Clicked = document.querySelector(".project1");
+const welcomeSection = document.querySelector(".welcome-section");
+const nameSection = document.querySelector(".name-section-container");
+const catImage = document.querySelector(".cat");
 
-imagePfp.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
-sectionName.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
-welcome.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
+let isWelcomeVisible = false;
 
-clickProject1.addEventListener("click", ()=>{
-    if (sectionName.style.visibility === "hidden") {
-        sectionName.style.visibility = "visible";
-        sectionName.style.opacity = "1";
-        welcome.style.visibility = "hidden";
-        imagePfp.style.visibility = "hidden";
-        welcome.style.opacity = "0";
+project1Clicked.addEventListener("click", () => {
+    if (isWelcomeVisible) {
+        welcomeSection.classList.remove("show");
+        welcomeSection.classList.add("hidden");
+        catImage.classList.remove("show"); // Hide cat image
+        catImage.classList.add("hidden");
+        setTimeout(() => {
+            nameSection.classList.remove("hidden");
+        }, 100);
     } else {
-        sectionName.style.visibility = "hidden";
-        sectionName.style.opacity = "0";
-        welcome.style.visibility = "visible";
-        imagePfp.style.visibility = "visible";
-        imagePfp.style.opacity = "1";
-        welcome.style.opacity= "1";
-
+        nameSection.classList.add("hidden");
+        setTimeout(() => {
+            welcomeSection.classList.remove("hidden");
+            welcomeSection.classList.add("show");
+            catImage.classList.remove("hidden"); // Show cat image
+            catImage.classList.add("show");
+        }, 100);
     }
-}); 
+    isWelcomeVisible = !isWelcomeVisible;
+});
