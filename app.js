@@ -25,3 +25,4 @@ project1Clicked.addEventListener("click", () => {
     }
     isWelcomeVisible = !isWelcomeVisible;
 });
+K
